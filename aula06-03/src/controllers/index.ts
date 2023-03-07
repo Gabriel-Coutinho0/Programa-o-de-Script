@@ -1,4 +1,4 @@
 import data from "./Data"
-import math from "./math"
+import math from "./Math"
 
 export {data,math}
