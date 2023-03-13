@@ -16,7 +16,7 @@ export const authorization = async (req: Request, res: Response, next: NextFunct
         // valida o token
         const decoded = <any>jwt.verify(token, process.env.JWT_SECRET);
         if( !decoded ){
-            res.status(401).json({error:"Não autorizado"});
+            return res.status(401).json({error:"Não autorizado"});
         }
         else{
             // passa os dados pelo res.locals para o próximo nível da middleware
