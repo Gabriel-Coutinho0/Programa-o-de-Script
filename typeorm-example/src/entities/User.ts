@@ -1,17 +1,21 @@
 import { Entity, PrimaryGeneratedColumn, Column, BeforeInsert, BeforeUpdate } from "typeorm";
 import * as bcrypt from "bcrypt";
 
-@Entity({name:"users"})
+@Entity({ name: "users" })
 export class User {
     // define a chave primária como auto incremento
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({nullable: false, unique:true, length: 70})
+    @Column({ nullable: false, unique: true, length: 70 })
     mail: string;
 
-    @Column({nullable: false, select: false, length: 100})
+    @Column({ nullable: false, select: false, length: 100 })
     password: string;
+
+    // @Column({ type: "integer" })
+    // teste: number
+
 
     @BeforeInsert() //a função hashPassword é disparada antes do insert e update
     @BeforeUpdate()
