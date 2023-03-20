@@ -1,11 +1,7 @@
-import Data  from "./Data";
-import Login from "./Login";
 import UserController from "./UserController";
-import Matematica from "./Matematica";
+import SpentController from "./SpentController";
 
 export{
-    Data,
-    Matematica,
-    Login,
-    UserController
+    UserController,
+    SpentController
 };
